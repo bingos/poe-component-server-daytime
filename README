@@ -1,0 +1,6 @@
+POE::Component::Server::Daytime
+===============================
+
+A very simple component to implement RFC 867.
+
+>;o)
