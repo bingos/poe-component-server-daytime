@@ -21,7 +21,7 @@ use vars qw($VERSION);
 use constant DATAGRAM_MAXLEN => 1024;
 use constant DEFAULT_PORT => 13;
 
-$VERSION = '1.12';
+$VERSION = '1.14';
 
 sub spawn {
   my $package = shift;
@@ -117,7 +117,7 @@ L<POE>. It is a class inherited from L<POE::Component::Server::Echo>.
 
 =over
 
-=item spawn
+=item C<spawn>
 
 Takes a number of optional values: 
 
@@ -141,7 +141,7 @@ Chris 'BinGOs' Williams, <chris@bingosnet.co.uk>
 
 =head1 LICENSE
 
-Copyright (C) Chris Williams
+Copyright E<copy> Chris Williams
 
 This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
