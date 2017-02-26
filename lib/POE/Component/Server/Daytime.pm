@@ -9,6 +9,8 @@
 
 package POE::Component::Server::Daytime;
 
+#ABSTRACT: A POE component that implements an RFC 867 Daytime server.
+
 use strict;
 use warnings;
 use Carp;
@@ -16,12 +18,9 @@ use POE;
 use Socket;
 use POSIX;
 use base qw(POE::Component::Server::Echo);
-use vars qw($VERSION);
 
 use constant DATAGRAM_MAXLEN => 1024;
 use constant DEFAULT_PORT => 13;
-
-$VERSION = '1.14';
 
 sub spawn {
   my $package = shift;
@@ -90,12 +89,9 @@ sub _get_datagram {
   undef;
 }
 
-1;
-__END__
+qq[What time is love?];
 
-=head1 NAME
-
-POE::Component::Server::Daytime - A POE component that implements an RFC 867 Daytime server.
+=pod
 
 =head1 SYNOPSIS
 
@@ -119,7 +115,7 @@ L<POE>. It is a class inherited from L<POE::Component::Server::Echo>.
 
 =item C<spawn>
 
-Takes a number of optional values: 
+Takes a number of optional values:
 
   "Alias", the kernel alias that this component is to be blessed with; 
   "BindAddress", the address on the local host to bind to, defaults to 
@@ -134,16 +130,6 @@ Takes a number of optional values:
 =head1 BUGS
 
 Report any bugs through L<http://rt.cpan.org/>.
-
-=head1 AUTHOR
-
-Chris 'BinGOs' Williams, <chris@bingosnet.co.uk>
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
